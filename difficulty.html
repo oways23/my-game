@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Difficulty</title>
+<link rel="stylesheet" href="style.css">
+<style>
+</style>
+</head>
+<body>
+    <header>
+        <h1>✨ Tic Tac Toe vs KY’s Forehead ✨</h1>
+    </header>
+
+    <div class="menu-container">
+        <h1 class="title">Choose Forehead Difficulty</h1>
+
+        <div class="difficulty-menu">
+            <button class="difficulty-btn" onclick="startGame('easy')">1 - Unfearable 😇</button>
+            <button class="difficulty-btn" onclick="startGame('medium')">2 - FiFi 😏</button>
+            <button class="difficulty-btn" onclick="startGame('hard')">3 - Abder 🐐</button>
+        </div>
+
+        <button class="back-btn" onclick="goBack()">⬅ Back</button>
+    </div>
+    
+    <footer>
+        <p>Made with 💛 by Oways | <a href="start-menu.html">Back to Menu</a></p>
+    </footer>
+<script>
+function startGame(difficulty) {
+    window.location.href = `tic-tac-toe.html?difficulty=${difficulty}`;
+}
+
+function goBack() {
+    window.location.href = "start-menu.html";
+}
+</script>
+
+</body>
+</html>

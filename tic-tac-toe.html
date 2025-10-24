@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe with Bot</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>✨ Tic Tac Toe vs KY’s Forehead ✨</h1>
+    </header>
+
+    <h1>Tic-Tac-Toe vs KY's forehead</h1>
+
+    <div style="display: none;">
+        <label for="difficulty">Choose Bot Difficulty: </label>
+        <select id="difficulty">
+            <option value="easy">1 - Unfearable</option>
+            <option value="medium">2 - FiFi</option>
+            <option value="hard">3 - Abder 🐐</option>
+        </select>
+    </div>
+    
+
+    <div class="game-container">
+        <!-- Replace with your own image -->
+        <img src="https://i.imgur.com/byF44I9.jpeg" class="background-img" alt="Background">
+        <div class="board" id="board"></div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div id="popup-content" class="popup-content">
+            <span id="popup-emoji">🎉</span>
+            <p id="popup-message"></p>
+            <button id="restart">OK</button>
+        </div>
+    </div>
+
+    <div id="message"></div>
+    <footer>
+        <p>Made with 💛 by Oways | <a href="start-menu.html">Back to Menu</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
