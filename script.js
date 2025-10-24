@@ -3,8 +3,8 @@ const messageEl = document.getElementById('message'); // not used anymore for wi
 const restartBtn = document.getElementById('restart');
 const difficultyEl = document.getElementById('difficulty');
 // Load sound for bot move
-const botMoveSound = new Audio("media/sounds/fart-83471.mp3");
-botMoveSound.volume = 0.6; // adjust volume if needed
+const botMoveSound = new Audio("fart-83471.mp3");
+botMoveSound.volume = 0.9; // adjust volume if needed
 
 let board = ['', '', '', '', '', '', '', '', ''];
 const playerMark = 'X';
@@ -68,18 +68,17 @@ function showPopup(result) {
     const oldButton = document.getElementById('restart');
     if (oldButton) oldButton.remove();
 
-    // Create a video element
-    const video = document.createElement('video');
-    video.id = 'popup-video';
-    video.src = 'media/videos/abder-win.mp4'; // replace with your video path
-    video.controls = true;
-    video.autoplay = true;
-    video.muted = true; // important for autoplay
-    video.loop = true; // optional: loops automatically
-    video.style.width = '100%';
-    video.style.marginTop = '10px';
+    // Create iframe element for embedded video
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://streamable.com/e/s1rxdi?autoplay=1&muted=0'; // your embed URL
+    iframe.id = 'popup-video'; // optional: same ID if you need to style/remove it later
+    iframe.width = '100%';
+     iframe.height = '500'; // adjust height as needed
+    iframe.frameBorder = '0';
+    iframe.allow = 'fullscreen';
 
-    popupContent.appendChild(video);
+    // Append iframe to popup
+    popupContent.appendChild(iframe);
 
     // Create "Back to Difficulty" button
     const backButton = document.createElement('button');
