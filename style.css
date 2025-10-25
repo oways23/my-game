@@ -72,6 +72,13 @@ footer a:hover {
     animation: gradientMove 12s ease infinite;
 }
 
+@media (max-width: 600px) {
+  /* Styles for small screens (phones) */
+  .page-content.game-page {
+    padding-block: 100px;
+  }
+}
+
 /* Keyframes for smooth motion */
 @keyframes gradientMove {
     0% {
